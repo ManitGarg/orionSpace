@@ -12,7 +12,7 @@ import type {
   TrajectoryResponse,
 } from "./types";
 
-const BASE = "/api";
+const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const TOKEN_STORAGE_KEY = "orion.auth.token";
 
 /** Distinguishes "log in" (401) from "your role cannot do this" (403) at the call site. */
